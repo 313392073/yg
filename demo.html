@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fullPage.js 背景演示_fullPage.js全屏滚动插件</title>
+<meta name="keywords" content="fullPage.js,全屏滚动,jQuery全屏滚动,fullPage全屏滚动,jQuery插件">
+<meta name="description" content="fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站。本站详细介绍fullPage各初始化属性设置。如果你也希望你的网站能设计成全屏的，显得更上档次，你可以试试fullPage.js。">
+<link rel="stylesheet" href="jquery.fullPage.css">
+<style>
+.section1 { background: url(1.jpg) 50%;}
+.section2 { background: url(2.jpg) 50%;}
+.section3 { background: url(3.jpg) 50%;}
+.section4 { background: url(4.jpg) 50%;}
+</style>
+</head>
+<body>
+<div id="fullPage">
+  <div class="section section1"></div>
+  <div class="section section2"></div>
+  <div class="section section3"></div>
+  <div class="section section4"></div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.js"></script>
+<script src="jquery.fullPage.js"></script>
+<script>
+$(function(){
+	$('#fullPage').fullpage();
+});
+</script>
+</body>
+</html>

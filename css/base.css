@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* @import "banner.css"; */
+@import "animate.min.css";
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-weight: 300;
+    margin: 0 ;
+    padding: 0;
+}
+body, html{
+    overflow-x: hidden;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.section{
+    overflow-x: hidden;
+}
+.v-hidden{
+    visibility: hidden;
+}
+a { text-decoration: none;  cursor: pointer;}
+a:hover{
+    text-decoration:none;
+}
+/* a:hover { -webkit-transition: ease .3s; -moz-transition: ease .3s; -ms-transition: ease .3s; -o-transition: ease .3s; transition: ease .3s; color: #000;} */
+ul,li{
+    list-style-type: none;
+    list-style: none;
+}

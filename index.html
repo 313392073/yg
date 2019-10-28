@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <title>Document</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="http://81hu.com/fullpage/jquery.fullPage.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 导航 -->
+    <section class="navbar">
+        <div class="container">
+            <div class="navbar-header left-navbar">
+                <!-- <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/logo.png" class="logo-white">
+                </a>
+            </div>
+            <p class="nmobile-icon"><img src="./img/daohang.png" alt=""></p>
+            <div class="navbar-collapse">
+                <a href="#page1">首页</a>
+                <a href="#page2">关于V UNION</a>
+                <a href="#page4">发行计划</a>
+                <a href="#page5">生态系统</a>
+                <a href="#page7">产品优势</a>
+                <a href="./ktg.pdf">白皮书</a>
+            </div>
+            <div class="navbar-header nmobile-lang">
+                <p class="lang">
+                    <a class="active" href="index.html">中文</a> |
+                    <a href="index_en.html">English</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div id="fullpage">
+        <!--第一个页面-->
+        <div class="section">
+            <div class="page1-container">
+                <img src="./img/bg1.jpg" class="bgimg">
+                <div class="black-shade page1_1"></div>
+                <div class="font page1_2">
+                    <h2>V UNION</h2>
+                    <p>国际聚合生态应用平台</p>
+                    <p>启动通证新引擎  构建链商平台新生态</p>
+                </div>
+            </div>
+        </div>
+        <!--第er个页面-->
+        <div class="section">
+            <div class="page1-container">
+                <img src="./img/bg1.jpg" class="bgimg">
+                <div class="black-shade page2_1"></div>
+                <div class="font page2_2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.js"></script>
+    <script type="text/javascript" src="http://81hu.com/fullpage/jquery.fullPage.js"></script>
+    <!-- <script type="text/javascript" src="http://www.kategold.info/js/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="http://www.kategold.info/js/easings.min.js"></script> -->
+    <script type="text/javascript">
+        $(function(){
+            
+            $('#fullPage').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+                'navigation': true,//导航
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+		        menu: '#menu'
+            });
+            $(window).resize(function(){
+                autoScrolling();
+            });
+            function autoScrolling(){
+                var $ww = $(window).width();
+                if($ww < 1024){
+                    $(".nmobile-icon").addClass('specTag');
+                    $.fn.fullpage.setAutoScrolling(false);
+                } else {
+                    $(".nmobile-icon").removeClass('specTag');
+                    $(".navbar-collapse").show();
+                    $(".nmobile-lang").show();
+                    $.fn.fullpage.setAutoScrolling(true);
+                }
+            }
+            autoScrolling();
+        });
+
+        $(".nmobile-icon").on("click",function() {
+            if($(".nmobile-icon").hasClass('specTag')) {
+                $(".nmobile-icon").removeClass('specTag')
+                $(".navbar-collapse").show();
+                $(".nmobile-lang").show();
+            }else{
+                $(".nmobile-icon").addClass('specTag')
+                $(".navbar-collapse").hide();
+                $(".nmobile-lang").hide();
+            }
+        })
+    </script>
+</body>
+</html>
