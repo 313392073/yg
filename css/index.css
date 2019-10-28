@@ -72,19 +72,31 @@
   .navbar .container .nmobile-icon {
     display: none;
   }
-  #fullpage {
+  #fullPage {
     width: 100%;
   }
-  #fullpage .page1-container .black-shade {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
+  #fullPage .inner-box {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
   }
-  #fullpage .bgimg {
+  #fullPage .inner-box .page-content {
+    width: 100%;
+    position: absolute;
+    top: 33%;
+    left: 0;
+    color: #ffffff;
+    text-align: center;
+  }
+  #fullPage .inner-box .page-content h2 {
+    font-size: 186px;
+    font-weight: bold;
+  }
+  #fullPage .inner-box .page-content p {
+    font-size: 32px;
+  }
+  #fullPage .inner-box .bgimg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -184,12 +196,33 @@
     font-weight: bold;
     color: #018cff;
   }
-  #fullpage {
+  #fullPage {
     width: 100%;
   }
-  #fullpage .bgimg {
+  #fullPage .inner-box {
     width: 100%;
     height: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  #fullPage .inner-box .page-content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    color: #ffffff;
+    text-align: center;
+  }
+  #fullPage .inner-box .page-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  #fullPage .inner-box .page-content p {
+    font-size: 1.2rem;
+  }
+  #fullPage .inner-box .bgimg {
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
   }
 }
