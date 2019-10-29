@@ -81,6 +81,65 @@
     position: relative;
     background-color: rgba(0, 0, 0, 0.9);
   }
+  #fullPage .inner-box .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide {
+    position: relative;
+    background: url("../img/1.png") no-repeat center;
+    background-size: cover;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content {
+    top: 25%;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content h2 {
+    font-size: 50px;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content .content-desc {
+    overflow: hidden;
+    width: 80%;
+    margin: 5% auto;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content .content-desc > div {
+    float: left;
+    width: 20%;
+    height: 315px;
+    background-color: #ffffff;
+    padding: 30px 10px 0;
+    box-sizing: border-box;
+    color: #333333;
+    margin: 0 2px;
+    text-align: left;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content .content-desc > div:nth-child(1) {
+    width: 32%;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content .content-desc > div:nth-child(4) {
+    width: 22%;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content .content-desc > div p {
+    font-size: 16px;
+    color: #000000;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content .content-desc > div p.title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100px;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content.page2-2content {
+    top: 42%;
+    max-width: 560px;
+    left: 60%;
+    text-align: left;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content.page2-2content h2 {
+    line-height: 100px;
+  }
+  #fullPage .inner-box .swiper-container .swiper-slide .page-content.page2-2content p {
+    font-size: 20px;
+    line-height: 35px;
+  }
   #fullPage .inner-box .page-content {
     width: 100%;
     position: absolute;
@@ -100,6 +159,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .page2-2content {
+    top: 35%;
+    left: 41%!important;
   }
 }
 @media screen and (max-width: 1023px) {

@@ -71,6 +71,65 @@
             height: 100%;
             position: relative;
             background-color: rgba(0,0,0,.9);
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                .swiper-slide {
+                    position: relative;
+                    background: url("../img/1.png") no-repeat center;
+                    background-size: cover;
+                    .page-content{
+                        top: 25%;
+                        h2{
+                            font-size: 50px;
+                        }
+                        .content-desc{
+                            overflow: hidden;
+                            width: 80%;
+                            margin: 5% auto;
+                            &>div{
+                                float: left;
+                                width: 20%;
+                                height: 315px;
+                                background-color: #ffffff;
+                                padding:30px 10px 0;
+                                box-sizing: border-box;
+                                color: #333333;
+                                margin:0 2px;
+                                text-align: left;
+                                &:nth-child(1) {
+                                    width: 32%;
+                                }
+                                &:nth-child(4) {
+                                    width: 22%;
+                                }
+                                p{
+                                    font-size: 16px;
+                                    color: #000000;
+                                    &.title{
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        line-height: 100px;
+                                    }
+                                }
+                            }
+                        }
+                        &.page2-2content{
+                            top: 42%;
+                            max-width: 560px;
+                            left: 60%;
+                            text-align: left;
+                            h2{
+                                line-height:100px;
+                            }
+                            p{
+                                font-size: 20px;
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
             .page-content{
                 width: 100%;
                 position: absolute;
@@ -95,7 +154,12 @@
     }
 }
 
-
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+    .page2-2content{
+        top: 35%;
+        left:41%!important;
+    }
+}
 @media screen and (max-width: 1023px){
     .navbar{
         position: fixed;
