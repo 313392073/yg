@@ -78,16 +78,112 @@
                     position: relative;
                     background: url("../img/1.png") no-repeat center;
                     background-size: cover;
+                    .footer{
+                        width: 100%;
+                        height: 80px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        line-height: 80px;
+                        text-align: center;
+                        background-color:#061623;
+                        color: #004f90;
+                        font-size: 20px;
+                    }
                     .page-content{
                         top: 25%;
+                        
                         h2{
                             font-size: 50px;
+                            line-height: 100px;;
                         }
+                        .content-right,.content-left{
+                            position: absolute;
+                            width: 35%;
+                            left: 55%;
+                            text-align: left;
+                            p{
+                                font-size: 20px;
+                                line-height: 40px;
+                            }
+                        }
+                        .content-left{
+                            left: 10%;
+                            width: 26%;
+                        }
+                        &.page4-content{
+                            top: 30%;
+                        }
+                        &.page4-2content{
+                            top: 30%;
+                        }
+                        &.page4-3content{
+                            top: 38%;
+                            .content-right{
+                                left: 57%;;
+                            }
+                        }
+                        &.page4-4content{
+                            top: 37%;
+                        }
+                        &.page4-5content{
+                            top: 39%;
+                            .content-right{
+                                left: 58%;
+                                width: 31.25%;;
+                            }
+                        }
+                        &.page5-2content{
+                            top: 15%;
+                            .spec-title{
+                                background:url("../img/title.png") no-repeat center;
+                                background-size: contain;
+                                font-size: 28px;
+                                color: #bde4ff;
+                            }
+                            .content-desc{
+                                margin: 3.5% auto!important;
+                            }   
+                        }
+
                         .content-desc{
-                            overflow: hidden;
                             width: 80%;
                             margin: 5% auto;
-                            &>div{
+                            zoom: 1;
+                            &:after{
+                                content: '';
+                                display: block;
+                                height: 0;
+                                visibility: hidden;
+                                clear: both;
+                            }
+                            .inner-desc{
+                                float: left;
+                                text-align: center;
+                                .bg-desc{
+                                    width: 360px;
+                                    height: 560px;
+                                    margin:0 10px;
+                                    background:url("../img/cfx.png") no-repeat center;
+                                    background-size: 100%;
+                                    padding: 60px 35px 80px;
+                                    box-sizing: border-box;
+                                    img{
+                                        max-width: 100%;
+                                    }
+                                    .desc-text{
+                                        font-size: 20px;
+                                        text-align: left;
+                                    }
+                                    .desc-title{
+                                        font-size: 26px;
+                                        font-weight: bold;
+                                        margin: 45px auto 20px;
+                                    }
+                                    
+                                }
+                            }
+                            .page2-inner{
                                 float: left;
                                 width: 20%;
                                 height: 315px;
@@ -99,6 +195,12 @@
                                 text-align: left;
                                 &:nth-child(1) {
                                     width: 32%;
+                                    position: relative;
+                                    .book{
+                                        position: absolute;
+                                        top: -45px;
+                                        right: -50px;
+                                    }
                                 }
                                 &:nth-child(4) {
                                     width: 22%;
@@ -106,6 +208,7 @@
                                 p{
                                     font-size: 16px;
                                     color: #000000;
+                                    line-height: 30px;
                                     &.title{
                                         font-size: 20px;
                                         font-weight: bold;
@@ -127,6 +230,16 @@
                                 line-height: 35px;
                             }
                         }
+                        &.page2-3content{
+                            top: 15%;
+                            &>p{
+                                text-align: center;
+                                img{
+                                    max-width: 100%;
+                                    width: 65%;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -137,12 +250,53 @@
                 left: 0;
                 color: #ffffff;
                 text-align: center;
+                zoom: 1;
+                &:after{
+                    content: '';
+                    display: block;
+                    height: 0;
+                    visibility: hidden;
+                    clear: both;
+                }
                 h2{
                     font-size: 186px;
                     font-weight: bold;
                 }
                 p{
                     font-size: 32px;
+                    &.spec-desc{
+                        margin: 40px 0;
+                    }
+                }
+            }
+            .page3-content{
+                top: 30%;
+                .left-centent{
+                    float: left;
+                    width: 40%;
+                    text-align: left;
+                    margin-left: 10%;
+                    h2{
+                        font-size: 50px;
+                        line-height: 100px;
+                    }
+                    p{
+                        font-size: 20px;
+                        line-height: 40px;
+                        &.spec-desc{
+                            margin-top: 40px;
+                        }
+                    }
+                }
+                .right-centent{
+                    float: left;
+                    width: 40%;
+                    margin-left: 10%;
+                    text-align: left;
+                    &>p{
+                        font-size: 36px;
+                        font-weight: bold;
+                    }
                 }
             }
             .bgimg{
@@ -260,6 +414,131 @@
             height: 100%;
             position: relative;
             background-color: rgba(0,0,0,.9);
+            .swiper-container{
+                width: 100%;
+                .swiper-slide {
+                    width: 100%;
+                    height: 100vh;
+                    position: relative;
+                    background: url("../img/1.png") no-repeat center;
+                    background-size: cover;
+                    .footer{
+                        width: 100%;
+                        height: 50;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        line-height: 50px;
+                        text-align: center;
+                        background-color:#061623;
+                        color: #004f90;
+                        font-size: 16px;
+                    }
+                    .book{
+                        display: none;
+                    }
+                    .page-content{
+                        top: 10%;
+                        h2{
+                            font-size: 2rem;
+                            margin-bottom: 1rem;
+                        }
+                        &.page2-2content{
+                            top: 35%;
+                            p{
+                                padding: 0 5%;
+                                box-sizing: border-box;
+                            }
+                        }
+                        &.page2-3content{
+                            top: 30%;
+                            &>p{
+                                width: 80%;
+                                margin: 0 auto;
+                                img{
+                                    max-width: 100%;;
+                                }
+                            }
+                        }
+                        .content-desc{
+                            width: 80%;
+                            margin: 0 auto;
+                            .page2-inner{
+                                background-color: #ffffff;
+                                padding: 0.5rem;
+                                box-sizing: border-box;
+                                margin-bottom: 0.8rem;
+                                border-radius: 6px;
+                                color: #000000;
+                                text-align: left;
+                                &>p{
+                                    font-size: 14px;
+                                    line-height: 20px;;
+                                }
+                                .title{
+                                    color: #018cff;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                }
+                            }
+                            .inner-desc{
+                                float: left;
+                                width: 46%;
+                                margin: 0 2%;
+                                text-align: center;
+                                .bg-desc{
+                                    width: 100%;
+                                    height: 35vh;
+                                    background:url("../img/cfx.png") no-repeat center;
+                                    background-size: 100%;
+                                    padding: 3vh 2vh;
+                                    box-sizing: border-box;
+                                    img{
+                                        max-width: 100%;
+                                        width: 30%;
+                                    }
+                                    .desc-text{
+                                        font-size: 12px;
+                                        text-align: left;
+                                    }
+                                    .desc-title{
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        margin: 2vh 0;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    [class*="page4-"],.page5-content{
+                        top: 28%;
+                        &>div,&>section{
+                            width: 80%;
+                            margin: 0 auto;
+                            p{
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .page4-4content{
+                        top: 38%;
+                    }
+                    .page5-2content{
+                        top: 12%;
+                        .spec-title{
+                            background:url("../img/title.png") no-repeat center;
+                            background-size: contain;
+                            font-size: 28px;
+                            color: #bde4ff;
+                        }
+                        .content-desc{
+                            margin: 3.5% auto!important;
+                        }   
+                    }
+                }
+            }
             .page-content{
                 width: 100%;
                 position: absolute;
@@ -274,6 +553,17 @@
                 p{
                     font-size: 1.2rem;
                 }
+                &.page3-content{
+                    top: 15%;
+                    .left-centent{
+                        h2{
+                            margin-bottom: 2rem;
+                        }
+                        text-align: left;
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                }
             }
             .bgimg{
                 width: 100%;
@@ -282,4 +572,29 @@
             }
         }
     }
+}
+
+#fp-nav.right{
+    left: 17px;
+}
+#fp-nav span, .fp-slidesNav span,.swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;;
+    border-radius: 0;
+    background: #ffffff;
+    border: none;
+    opacity: 1;
+}
+#fp-nav li .active span, .fp-slidesNav .active span,.swiper-pagination-bullet-active{
+    background: #018cff;
+    border: none;
+    width: 10px;
+    height: 10px;;
+}
+.swiper-pagination-bullet,.swiper-pagination-bullet-active{
+    width: 12px;
+    height: 12px;;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background: transparent;
 }
