@@ -87,8 +87,6 @@
   }
   #fullPage .inner-box .swiper-container .swiper-slide {
     position: relative;
-    background: url("../img/1.png") no-repeat center;
-    background-size: cover;
   }
   #fullPage .inner-box .swiper-container .swiper-slide .footer {
     width: 100%;
@@ -299,14 +297,19 @@
     margin-top: 40px;
   }
   #fullPage .inner-box .page3-content .right-centent {
-    float: left;
-    width: 40%;
-    margin-left: 10%;
+    position: absolute;
+    top: -72px;
+    left: 44.5%;
     text-align: left;
   }
   #fullPage .inner-box .page3-content .right-centent > p {
     font-size: 36px;
     font-weight: bold;
+    text-align: center;
+  }
+  #fullPage .inner-box .page3-content .right-centent > p > img {
+    max-width: 100%;
+    margin-bottom: 15px;
   }
   #fullPage .inner-box .bgimg {
     width: 100%;
@@ -579,6 +582,9 @@
   }
   #fullPage .inner-box .page-content.page3-content .left-centent h2 {
     margin-bottom: 2rem;
+  }
+  #fullPage .inner-box .page-content.page3-content .anpage3_2_1 {
+    display: none;
   }
   #fullPage .inner-box .bgimg {
     width: 100%;
