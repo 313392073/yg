@@ -1,55 +1,121 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>fullPage.js 背景演示_fullPage.js全屏滚动插件</title>
-<meta name="keywords" content="fullPage.js,全屏滚动,jQuery全屏滚动,fullPage全屏滚动,jQuery插件">
-<meta name="description" content="fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站。本站详细介绍fullPage各初始化属性设置。如果你也希望你的网站能设计成全屏的，显得更上档次，你可以试试fullPage.js。">
-<link rel="stylesheet" href="./css/base.css">
-<link rel="stylesheet" href="./css/fullPage.css">
-<style>
-.section1 { background: url("./img/bg1.jpg") 50% no-repeat;}
-.section2 { background: url("./img/bg1.jpg") 50% no-repeat;}
-.section3 { background: url("./img/bg1.jpg") 50% no-repeat;}
-.section4 { background: url("./img/bg1.jpg") 50% no-repeat;}
-.navbar-collapse{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    background-color: #ffffff;
-    z-index: 666;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .big {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /*参照物*/
+        }
+
+        .pic {
+            width: 100%;
+            height: 100%;
+        }
+
+        .pic .inner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /*绝对定位*/
+            display: none;
+        }
+        .pic .inner img{
+            /* position: absolute;
+            left: 0;
+            width: 0; */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .but {
+            position: absolute;
+            bottom: 15px;
+            right: 12px;
+        }
+
+        .but ul li {
+            list-style-type: none;
+            width: 30px;
+            height: 20px;
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            font-family: "microsoft yahei";
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .but ul li:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .but .hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
 </head>
+
 <body>
-<div class="navbar-collapse" id="menu">
-        <a href="#page1">首页</a>
-        <a href="#page2">关于V UNION</a>
-        <a href="#page4">发行计划</a>
-        <a href="#page5">生态系统</a>
-        <a href="#page7">产品优势</a>
-        <a href="./ktg.pdf">白皮书</a>
+    <div class="big">
+        <div class="pic">
+            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300a.png" style="display:block;background:#ccc"></div>
+            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300b.png"></div>
+            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300c.png"></div>
+            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300d.png"></div>
+            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300.png"></div>
+        </div>
+        <div class="but">
+            <ul>
+                <li class="hover">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
     </div>
-<div id="fullPage">
-  <div class="section section1"></div>
-  <div class="section section2"></div>
-  <div class="section section3"></div>
-  <div class="section section4"></div>
-</div>
-<script src="./js/jquery.js"></script>
-<script src="./js/jquery.fullPage.js"></script>
-<script>
-$(function(){
-	$('#fullPage').fullpage({
-        anchors: ['page1', 'page2', 'page3', 'page4'],
-        menu: '#menu',
-        'navigation': true,
-    });
-});
-</script>
+    <script src="./js/jquery.js"></script>
+    <script>
+        function aa() {
+            var lIndex = 0;
+            $(".but ul li").click(function () {
+                $(this).addClass("hover").siblings().removeClass("hover");
+                var nIndex = $(this).index();
+                $(".pic .inner").eq(nIndex).fadeIn(300).siblings().fadeOut(300);
+                lIndex = nIndex;
+            });
+
+
+            function dingshi() {
+                setInterval(function () {
+                    (lIndex < 4) ? (lIndex++) : (lIndex = 0);
+                    $(".but ul li").eq(lIndex).addClass("hover").siblings().removeClass("hover");
+                    $(".pic .inner").eq(lIndex).fadeIn().siblings().fadeOut();
+                }, 2000);
+            };
+            dingshi(); //执行
+        }
+        aa();
+    </script>
 </body>
+
 </html>

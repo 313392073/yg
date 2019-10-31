@@ -8,11 +8,12 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
-    <title>UNION</title>
-    <meta name="keywords" content="UNION">
-    <meta name="description" content="UNION">
+    <title>Document</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/fullPage.css">
+    <!-- <link rel="stylesheet" href="./css/swiper.min.css" media="screen and (min-width: 1024px)"> -->
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/index.css">
      <!--[if lt IE 9]> 
@@ -249,7 +250,8 @@
             });
             function autoScrolling(){
                 var $ww = $(window).width();
-                $(".inner-box").width($ww);
+                $(".swiper-pagination").width($ww);
+                $(".swiper-slide").width($ww);
                 if($ww < 1024){
                     $(".nmobile-icon").addClass('specTag');
                     $.fn.fullpage.setAutoScrolling(true);
@@ -440,8 +442,7 @@
                 pagination: $(page),
                 paginationClickable: true,
                 spaceBetween: 0,
-                effect: 'fade',
-                mousewheel:false
+                effect: 'fade'
             });
         }
         let nowpage;
