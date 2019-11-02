@@ -6,115 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/fullPage.css">
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-        html,body{
-            width: 100%;
-            height: 100%;
-        }
-        .big {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            /*参照物*/
-        }
-
-        .pic {
-            width: 100%;
-            height: 100%;
-        }
-
-        .pic .inner {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            /*绝对定位*/
-            display: none;
-        }
-        .pic .inner img{
-            /* position: absolute;
-            left: 0;
-            width: 0; */
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .but {
-            position: absolute;
-            bottom: 15px;
-            right: 12px;
-        }
-
-        .but ul li {
+        #menu {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            left: 10px;
+            top: 10px;
             list-style-type: none;
-            width: 30px;
-            height: 20px;
+            z-index: 70;
+        }
+
+        #menu li {
             float: left;
-            margin-left: 10px;
-            text-align: center;
-            font-family: "microsoft yahei";
-            line-height: 20px;
-            font-size: 12px;
+            margin: 0 10px 0 0;
+            font-size: 14px;
+        }
+
+        #menu a {
+            float: left;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+        }
+
+        #menu .active a {
             color: #fff;
-            background: rgba(0, 0, 0, 0.3);
-            cursor: pointer;
+            background-color: #333;
         }
 
-        .but ul li:hover {
-            background: rgba(0, 0, 0, 0.7);
+        .section {
+            text-align: center;
+            font: 50px "Microsoft Yahei";
+            color: #fff;
         }
 
-        .but .hover {
-            background: rgba(0, 0, 0, 0.7);
+        .section p {
+            font: 30px "Microsoft Yahei";
+        }
+        .hide{
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <div class="big">
-        <div class="pic">
-            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300a.png" style="display:block;background:#ccc"></div>
-            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300b.png"></div>
-            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300c.png"></div>
-            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300d.png"></div>
-            <div class="inner"><img src="http://www.jq22.com/img/cs/500x300.png"></div>
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active">
+            <a href="#page1">第一屏</a>
+        </li>
+        <li data-menuanchor="page2" id="pagetwo">
+            <a href="#page2">第二屏</a>
+        </li>
+        <!-- <li data-menuanchor="page3" class="hide" >
+            <a href="#page3">第三屏</a>
+        </li>
+        <li data-menuanchor="page4" class="hide">
+            <a href="#page4">第四屏</a>
+        </li>
+        <li data-menuanchor="page5" class="hide">
+            <a href="#page5">第五屏</a>
+        </li> -->
+        <li data-menuanchor="page6">
+            <a href="#page6">第三屏</a>
+        </li>
+        <li data-menuanchor="page7">
+            <a href="#page7">第四屏</a>
+        </li>
+        <!-- <li data-menuanchor="page8" class="hide">
+            <a href="#page9">第八屏</a>
+        </li>
+        <li data-menuanchor="page9" class="hide">
+            <a href="#page9">第九屏</a>
+        </li>
+        <li data-menuanchor="page10" class="hide">
+            <a href="#page10">第10屏</a> -->
+        </li>
+        <li data-menuanchor="page11">
+            <a href="#page11">第五屏</a>
+        </li>
+    </ul>
+    <div id="fullPage">
+        <div class="section">
+            <h3>第一屏</h3>
+            <p>fullPage.js — 绑定菜单演示</p>
         </div>
-        <div class="but">
-            <ul>
-                <li class="hover">1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ul>
+        <div class="section">
+            <h3>第21屏</h3>
+            <p>绑定的菜单没有默认的样式，你需要自行编写</p>
+        </div>
+        <div class="section">
+            <h3>第22屏</h3>
+            <p>这是最后一屏</p>
+        </div>
+        <div class="section">
+            <h3>第23屏</h3>
+            <p>请查看左上角，点击可以控制</p>
+        </div>
+        <div class="section">
+            <h3>第三屏</h3>
+            <p>绑定的菜单没有默认的样式，你需要自行编写</p>
+        </div>
+        <div class="section">
+            <h3>第41屏</h3>
+            <p>绑定的菜单没有默认的样式，你需要自行编写</p>
+        </div>
+        <div class="section">
+            <h3>第42屏</h3>
+            <p>这是最后一屏</p>
+        </div>
+        <div class="section">
+            <h3>第43屏</h3>
+            <p>请查看左上角，点击可以控制</p>
+        </div>
+        <div class="section">
+            <h3>第44屏</h3>
+            <p>请查看左上角，点击可以控制</p>
+        </div>
+        <div class="section">
+            <h3>第51屏</h3>
+            <p>这是最后一屏</p>
+        </div>
+        <div class="section">
+            <h3>第52屏</h3>
+            <p>这是最后一屏</p>
         </div>
     </div>
     <script src="./js/jquery.js"></script>
-    <script>
-        function aa() {
-            var lIndex = 0;
-            $(".but ul li").click(function () {
-                $(this).addClass("hover").siblings().removeClass("hover");
-                var nIndex = $(this).index();
-                $(".pic .inner").eq(nIndex).fadeIn(300).siblings().fadeOut(300);
-                lIndex = nIndex;
+    <script src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#fullPage').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90','red',"blue","green",'#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+                // anchors: ['page1', 'page2', 'page2', 'page2','page3','page4','page4','page4','page4','page5','page5'],
+                anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7','page8','page9','page10','page11'],
+                menu: '#menu',
+                afterLoad:function (page) {
+                    console.log(page)
+                    if(page == 'page3' || page == 'page4' || page == 'page5') {
+                        $("#pagetwo").addClass('active').siblings().removeClass('active')
+                    }
+                }
             });
-
-
-            function dingshi() {
-                setInterval(function () {
-                    (lIndex < 4) ? (lIndex++) : (lIndex = 0);
-                    $(".but ul li").eq(lIndex).addClass("hover").siblings().removeClass("hover");
-                    $(".pic .inner").eq(lIndex).fadeIn().siblings().fadeOut();
-                }, 2000);
-            };
-            dingshi(); //执行
-        }
-        aa();
+        });
     </script>
 </body>
 

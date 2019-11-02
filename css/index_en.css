@@ -38,7 +38,7 @@
     vertical-align: middle;
   }
   .navbar .container .navbar-header .lang {
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     line-height: 80px;
   }
@@ -63,9 +63,8 @@
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
-    padding: 0px 20px;
+    padding: 0px 15px;
     box-sizing: border-box;
-    line-height: 50px;
   }
   .navbar .container .navbar-collapse > a:hover,
   .navbar .container .navbar-collapse > a.active {
@@ -151,7 +150,7 @@
     margin: 3.5% auto !important;
   }
   #fullPage .inner-box .page-content.page3-content {
-    top: 30%;
+    top: 25%;
   }
   #fullPage .inner-box .page-content.page3-content .left-centent {
     float: left;
@@ -161,10 +160,10 @@
   }
   #fullPage .inner-box .page-content.page3-content .left-centent p {
     font-size: 20px;
-    line-height: 40px;
+    line-height: 35px;
   }
   #fullPage .inner-box .page-content.page3-content .left-centent p.spec-desc {
-    margin-top: 40px;
+    margin-top: 15px;
   }
   #fullPage .inner-box .page-content.page3-content .right-centent {
     position: absolute;
@@ -179,13 +178,12 @@
   }
   #fullPage .inner-box .page-content.page3-content .right-centent > p > img {
     max-width: 100%;
-    margin-bottom: 15px;
   }
   #fullPage .inner-box .page-content .content-right,
   #fullPage .inner-box .page-content .content-left {
     position: absolute;
-    width: 35%;
-    left: 55%;
+    width: 40%;
+    left: 50%;
     text-align: left;
   }
   #fullPage .inner-box .page-content .content-right p,
@@ -201,7 +199,6 @@
   }
   #fullPage .inner-box .page-content .content-left {
     left: 10%;
-    width: 26%;
   }
   #fullPage .inner-box .page-content .content-desc {
     width: 80%;
@@ -242,7 +239,7 @@
   #fullPage .inner-box .page-content .content-desc .page2-inner {
     float: left;
     width: 20%;
-    height: 315px;
+    min-height: 315px;
     background-color: #ffffff;
     padding: 30px 10px 0;
     box-sizing: border-box;
@@ -270,12 +267,13 @@
   #fullPage .inner-box .page-content .content-desc .page2-inner p.title {
     font-size: 20px;
     font-weight: bold;
-    line-height: 100px;
+    margin-bottom: 15px;
   }
   #fullPage .inner-box .page-content h2 {
     font-size: 50px;
     font-weight: bold;
-    line-height: 100px;
+    line-height: 50px;
+    margin-bottom: 30px;
   }
   #fullPage .inner-box .page-content h2.anpage1_1 {
     font-size: 186px;
@@ -285,7 +283,7 @@
     font-size: 32px;
   }
   #fullPage .inner-box .page-content p.spec-desc {
-    margin: 40px 0;
+    margin: 15px 0;
   }
   #fullPage .inner-box .bgimg {
     width: 100%;
@@ -583,7 +581,7 @@
   #fullPage .inner-box .content-right,
   #fullPage .inner-box .content-left {
     width: 80%;
-    margin: 28% auto 0;
+    margin: 10% auto 0;
     text-align: left;
   }
   #fullPage .inner-box .bgimg {
@@ -757,6 +755,7 @@
 }
 #fp-nav.right {
   left: 17px;
+  width: 30px;
 }
 #fp-nav span,
 .fp-slidesNav span,
